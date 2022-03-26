@@ -1,2 +1,2 @@
 # propertys
-Classe de armazenagem das propriedades
+Armazenagem das propriedades
