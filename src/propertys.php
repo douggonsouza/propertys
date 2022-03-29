@@ -23,6 +23,40 @@ class propertys extends stdClass implements propertysInterface
     }
 
     /**
+     * Adiciona propriedades
+     *
+     * @param array $propertys
+     * 
+     * @return self
+     * 
+     */
+    public function add(array $propertys)
+    {
+        foreach($propertys as $name => $value){
+            if(isset($value) && !empty($value)){
+                $this->$name = $value;
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * Deleta propriedade
+     *
+     * @param string $property
+     * 
+     * @return self
+     * 
+     */
+    public function del(string $property)
+    {
+        unset($this->$property);
+
+        return $this;
+    }
+
+    /**
      * Sobrecarga do método mágico __set
      *
      * @param string $name
