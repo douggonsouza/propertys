@@ -63,7 +63,7 @@ class propertys extends stdClass implements propertysInterface
      * @param mixed $value
      * 
      */
-    public function __set(string $name, mixed $value)
+    public function __set(string $name, $value)
     {
         if(isset($value) && !empty($value)){
             $this->$name = $value;
